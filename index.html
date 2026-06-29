@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANTO - Usługi Elektryczne i Multimedialne</title>
+    <!-- Nowoczesna ikona SVG w pasku tytułu -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%2300adb5' stroke-width='2'/%3E%3Cpath d='M13 3L6 13h5v8l7-10h-5V3z' fill='%2300adb5'/%3E%3C/svg%3E">
+    
+    <!-- Biblioteka do obsługi mapy (Leaflet) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Połączenie z plikiem CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PASEK NAWIGACYJNY -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">DAN<span>TO</span></a>
+            <ul class="nav-links">
+                <li><a href="#oferta">Oferta</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- SEKCJA GŁÓWNA (HERO) -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <h1>DANTO</h1>
+            <p class="tagline">Usługi Elektryczne i Multimedialne</p>
+            <a href="#kontakt" class="btn">Zgłoś zlecenie</a>
+        </div>
+    </section>
+
+    <!-- SEKCJA OFERTY -->
+    <section class="services-section" id="oferta">
+        <div class="section-header">
+            <h2>Zakres usług</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Instalacje Elektryczne</h3>
+                <p>Kompleksowe wykonawstwo nowych instalacji elektrycznych <strong>od zera</strong> oraz profesjonalne <strong>modernizacje</strong> i naprawy już istniejących sieci.</p>
+            </div>
+            <div class="service-card">
+                <h3>Usuwanie Awarii</h3>
+                <p>Szybkie i sprawne lokalizowanie usterek, naprawa uszkodzonych przewodów oraz <strong>usuwanie nagłych awarii</strong> elektrycznych w celu przywrócenia bezpiecznego zasilania.</p>
+            </div>
+            <div class="service-card">
+                <h3>Monitoring & Alarmy</h3>
+                <p>Montaż nowoczesnych systemów <strong>monitoringu</strong>, systemów <strong>alarmowych</strong> oraz instalacja rozwiązań typu <strong>smart home</strong> zwiększających bezpieczeństwo.</p>
+            </div>
+            <div class="service-card">
+                <h3>Pomiary Instalacji</h3>
+                <p>Wykonujemy rzetelne i dokładne <strong>pomiary</strong> instalacji elektrycznych (odbiorcze i okresowe), dbając o bezawaryjność i pełne bezpieczeństwo.</p>
+            </div>
+            <div class="service-card">
+                <h3>Podłączenia AGD</h3>
+                <p>Fachowe podłączanie sprzętu <strong>AGD</strong> (płyty indukcyjne, piekarniki) przez uprawnionego elektryka, wraz z niezbędnym <strong>podbiciem gwarancji</strong>.</p>
+            </div>
+            <div class="service-card">
+                <h3>Montaż Osprzętu</h3>
+                <p>Bieżące drobne usługi elektryczne: profesjonalny montaż gniazdek, łączników, nowoczesnego oświetlenia LED i lamp.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCJA KONTAKTOWA -->
+    <section class="contact-section" id="kontakt">
+        <div class="contact-container">
+            <!-- Dane po lewej -->
+            <div class="contact-info">
+                <div class="installer-block" style="margin-bottom: 30px;">
+                    <h3>Daniel Antoszewski</h3>
+                    <p class="installer">Instalator</p>
+                    <ul class="contact-details">
+                        <li><span class="icon">📞</span> <a href="tel:+48535545876">+48 535 545 876</a></li>
+                        <li><span class="icon">✉️</span> <a href="mailto:kontakt@danto.pl">kontakt@danto.pl</a></li>
+                    </ul>
+                </div>
+
+                <div class="installer-block">
+                    <h3>Piotr Miszczyk</h3>
+                    <p class="installer">Instalator</p>
+                    <ul class="contact-details">
+                        <li><span class="icon">📞</span> <a href="tel:+48574573479">+48 574 573 479</a></li>
+                        <li><span class="icon">✉️</span> <a href="mailto:Elektrykpiotrr@gmail.com">Elektrykpiotrr@gmail.com</a></li>
+                        <li><span class="icon">📸</span> <a href="https://www.instagram.com/Miszczyk_instalacje" target="_blank">@Miszczyk_instalacje</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Formularz po prawej -->
+            <div class="contact-form-wrapper">
+                <form id="contactForm" action="https://formspree.io/f/xrewlyne" method="POST">
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko / Nazwa firmy</label>
+                        <input type="text" id="name" name="Imie_nazwisko" required placeholder="np. Jan Kowalski">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="np. jan@kowalski.pl">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Numer telefonu</label>
+                        <input type="tel" id="phone" name="Telefon" placeholder="np. 123 456 789">
+                    </div>
+
+                    <!-- POLE ADRESU Z SYNCHRONIZACJĄ MAPY -->
+                    <div class="form-group">
+                        <label for="address">Adres inwestycji / zlecenia <span style="text-transform: lowercase; color: var(--accent);">lub wybierz z mapy pod spodem</span></label>
+                        <input type="text" id="address" name="adres_zlecenia" required placeholder="Wpisz miasto, ulicę i numer domu...">
+                    </div>
+
+                    <!-- INTERAKTYWNA MAPKA -->
+                    <div class="form-group">
+                        <div id="map"></div>
+                        <!-- Ukryte pole przekazujące gotowy Link Google Maps do maila -->
+                        <input type="hidden" id="map_link" name="Link_Google_Maps" value="Brak wyboru z mapy">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Treść wiadomości (opis zlecenia)</label>
+                        <textarea id="message" name="Wiadomosc" rows="5" required placeholder="Jak możemy Ci pomóc? Opisz swoje zlecenie..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Wyślij wiadomość</button>
+                    <div id="formFeedback" class="form-feedback"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- STOPKA -->
+    <footer>
+        <p>&copy; 2026 DANTO. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- Połączenie z plikiem JS -->
+    <script src="script.js"></script>
+</body>
+</html>

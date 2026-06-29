@@ -28,7 +28,7 @@ const inputMapLink = document.getElementById('map_link');
 
 // Funkcja pomocnicza aktualizacji lub tworzenia pinezki + budowanie linku Google Maps
 function aktualizujPinezke(lat, lng, adresTekst) {
-    // Generowanie bezpośredniego linku do Google Maps ze współrzędnymi zlecenia
+    // Generujemy prawidłowy, czysty link do nawigacji Google Maps na podstawie współrzędnych
     inputMapLink.value = `https://www.google.com/maps?q=${lat},${lng}`;
     
     if (marker) {
